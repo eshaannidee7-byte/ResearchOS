@@ -1,0 +1,11 @@
+@media (max-width:960px) and (min-width:621px){
+  .sidebar{width:76px;padding:0 8px}
+  .brand-row{justify-content:center}
+  .brand span:not(.brand-mark),.new-project,.nav-label,.nav-item{font-size:0}
+  .new-project{height:51px;margin:18px 0;width:100%;padding:0}
+  .new-project span{font-size:21px;margin:0}
+  .nav-item{justify-content:center}
+  .nav-item>span{font-size:17px;margin:0}
+  .nav-item b,.nav-item i,.sidebar-bottom,.collapse-sidebar{display:none}
+  main{margin-left:76px;width:calc(100% - 76px)}
+}

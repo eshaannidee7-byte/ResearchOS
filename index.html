@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResearchOS — Research workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="extra.css" />
+    <link rel="stylesheet" href="coldmatch-inspired.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="science-fair.css" />
+    <link rel="stylesheet" href="abstract-grader.css" />
+    <link rel="stylesheet" href="polish.css" />
+    <link rel="stylesheet" href="judge.css" />
+    <link rel="stylesheet" href="workspace-strategy.css" />
+    <link rel="stylesheet" href="discovery-flow.css" />
+    <link rel="stylesheet" href="project-runtime.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-row"><a class="brand" href="#"><span class="brand-mark">✦</span><span>research<span>os</span></span></a><button class="collapse-sidebar" aria-label="Collapse sidebar">‹</button></div>
+        <button class="new-project" onclick="window.startReliableWorkspace && window.startReliableWorkspace()"><span>＋</span> New workspace</button>
+        <nav>
+          <p class="nav-label">Workspace</p>
+          <button class="nav-item active" data-view="overview"><span>◈</span> Discovery overview</button>
+          <button class="nav-item" data-view="library"><span>▤</span> Evidence library <b>15</b></button>
+          <button class="nav-item" data-view="map"><span>◌</span> Literature map</button>
+          <p class="nav-label">Discover</p>
+          <button class="nav-item" data-view="gaps"><span>✧</span> Research gaps <i>3</i></button>
+          <button class="nav-item" data-view="hypotheses"><span>⌁</span> Hypotheses</button>
+          <button class="nav-item" data-view="experiments"><span>⚗</span> Experiments</button>
+          <p class="nav-label">Network</p>
+          <button class="nav-item" data-view="researchers"><span>◎</span> Find collaborators <i>12</i></button>
+          <button class="nav-item" data-view="outreach"><span>✉</span> Outreach studio</button>
+          <button class="nav-item" data-view="sciencefair"><span>♧</span> Science fair guide</button>
+          <button class="nav-item" data-view="abstract"><span>▣</span> Abstract grader</button>
+        </nav>
+        <div class="sidebar-bottom"><div class="team-avatars"><span>✦</span><span>◌</span><span>+</span></div><button class="profile">Sign in <span>⌄</span></button></div>
+      </aside>
+
+      <main>
+        <header><div class="crumb"><span>Research projects</span><b>/</b> CXCL13 in luminal breast cancer</div><div class="header-actions"><button class="icon-btn">⌘ K</button><button class="share">Share <span>↗</span></button><button class="avatar" aria-label="Sign in">◌</button></div></header>
+
+        <section class="page-title"><div><p class="eyebrow">DISCOVERY WORKSPACE <span class="live-dot"></span> SYNTHESIZED</p><h1>Where the evidence<br /><em>starts to speak.</em></h1><p class="subtitle">15 papers, 4 datasets, and 3 active research directions connected in one living evidence map.</p></div><button class="primary" id="analyzeBtn"><span>✦</span> Run discovery analysis</button></section>
+
+        <section class="metrics">
+          <article><span class="metric-icon lavender">◌</span><div><strong>15</strong><p>Evidence sources</p></div><span class="up">+3 this week</span></article>
+          <article><span class="metric-icon peach">✧</span><div><strong>3</strong><p>High-confidence gaps</p></div><span class="status">Ready to explore</span></article>
+          <article><span class="metric-icon blue">⌁</span><div><strong>5</strong><p>Testable hypotheses</p></div><span class="status">Cited & grounded</span></article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel evidence-panel"><div class="panel-head"><div><p class="eyebrow">LITERATURE MAP</p><h2>The research landscape</h2></div><button class="text-button" data-go="map">Open map <span>→</span></button></div>
+            <div class="map-legend"><span><i class="legend-dot root"></i>Field</span><span><i class="legend-dot topic"></i>Topic</span><span><i class="legend-dot paper"></i>Paper</span></div>
+            <div class="map-canvas">
+              <svg viewBox="0 0 700 255" preserveAspectRatio="none" aria-hidden="true"><path d="M100 125 C185 125,176 58,260 58 M100 125 C180 125,181 190,260 190 M310 58 C397 58,385 46,471 46 M310 58 C405 58,394 112,471 112 M310 190 C400 190,391 168,471 168 M310 190 C394 190,400 225,471 225 M518 46 C568 46,575 35,635 35 M518 112 C573 112,568 101,635 101 M518 168 C568 168,578 172,635 172 M518 225 C572 225,580 225,635 225" /></svg>
+              <button class="node root-node" style="left:4%;top:41%">Breast<br/>cancer</button><button class="node topic-node" style="left:34%;top:13%">Luminal A</button><button class="node topic-node" style="left:34%;top:66%">Immune<br/>microenvironment</button><button class="node sub-node" style="left:63%;top:7%">ER+ signaling</button><button class="node sub-node selected" style="left:63%;top:34%">CXCL13</button><button class="node sub-node" style="left:63%;top:58%">B cells</button><button class="node sub-node" style="left:63%;top:83%">Tertiary lymphoid<br/>structures</button><button class="node paper-node" style="left:88%;top:2%">Park et al.</button><button class="node paper-node" style="left:88%;top:28%">Wang et al.</button><button class="node paper-node" style="left:88%;top:57%">Liu et al.</button><button class="node paper-node" style="left:88%;top:82%">Ahmed et al.</button>
+            </div>
+            <div class="map-callout"><span>✦</span><p><b>Emerging cluster:</b> CXCL13 and B-cell infiltration are increasingly linked, but evidence is mostly cross-sectional.</p><button>Explore →</button></div>
+          </article>
+          <article class="panel gap-panel"><div class="panel-head"><div><p class="eyebrow">RESEARCH GAP FINDER</p><h2>What’s missing?</h2></div><button class="text-button" data-go="gaps">All gaps <span>→</span></button></div>
+            <p class="muted">Evidence is strong here</p><div class="focus-tags"><span>Adults</span><span>North America</span><span>RNA-seq</span><span>Cross-sectional</span></div><p class="muted gap-label">Underexplored or unvalidated</p>
+            <div class="gap-list"><button class="gap active-gap"><span class="gap-num">01</span><div><b>Longitudinal validation</b><small>Only 1 of 15 studies follows outcomes over time</small></div><em>91%</em></button><button class="gap"><span class="gap-num">02</span><div><b>Multi-omics integration</b><small>Transcriptomic evidence lacks protein-level validation</small></div><em>86%</em></button><button class="gap"><span class="gap-num">03</span><div><b>Premenopausal cohorts</b><small>Age-stratified evidence is largely absent</small></div><em>74%</em></button></div>
+          </article>
+        </section>
+
+        <section class="lower-grid"><article class="panel hypothesis-panel"><div class="panel-head"><div><p class="eyebrow">TOP OPPORTUNITY</p><h2>A hypothesis worth testing</h2></div><span class="confidence">89% evidence fit</span></div><blockquote>“In ER+ Luminal A tumors, baseline CXCL13 expression predicts B-cell-rich tertiary lymphoid structures and improved response to endocrine therapy.”</blockquote><div class="source-line"><span>Grounded in 7 sources</span><span>•</span><span>Addresses gap #01 + #02</span><button data-go="hypotheses">View rationale →</button></div></article><article class="panel next-panel"><p class="eyebrow">NEXT BEST ACTION</p><h2>Turn insight into a study</h2><p>Build a preliminary experiment around this hypothesis, with variables, controls, and a statistical plan.</p><button class="outline" data-go="experiments">Build experiment <span>→</span></button></article></section>
+      </main>
+    </div>
+    <div class="toast" id="toast"><span>✦</span><div><b>Discovery analysis complete</b><p>3 new evidence links and 1 gap were found.</p></div><button id="closeToast">×</button></div>
+    <script src="auth-config.js"></script>
+    <script src="llm-config.js?build=9"></script>
+    <script src="app.js?build=10"></script>
+    <script src="science-fair-evaluator.js?build=8"></script>
+    <script src="calibrated-workspace.js?build=9"></script>
+    <script src="grader-override.js?build=8"></script>
+    <script src="workspace-wizard.js?build=9"></script>
+    <script>localStorage.removeItem('researchos-active-project');localStorage.removeItem('researchos-reliable-project');</script>
+    <script src="project-runtime.js?build=9"></script>
+    <script src="persistent-project.js?build=8"></script>
+    <style>
+      .source-link{text-decoration:none;transition:.18s}.source-link:hover{border-color:#bdb4fa;transform:translateY(-1px)}
+      .map-intro{display:flex;justify-content:space-between;align-items:start;gap:15px}.map-intro h2{margin-top:2px}
+      .project-landscape{position:relative;height:330px;margin-top:22px;border-radius:10px;overflow:hidden;background:radial-gradient(circle at center,#f4f1ff 0 14%,transparent 14.5%),linear-gradient(90deg,#f4f2ef 1px,transparent 1px),linear-gradient(#f4f2ef 1px,transparent 1px);background-size:auto,26px 26px,26px 26px}
+      .project-landscape:before,.project-landscape:after{content:'';position:absolute;inset:50% 8% auto;height:1px;background:#d8d1f8;transform:rotate(25deg)}.project-landscape:after{transform:rotate(-25deg)}
+      .landscape-node{position:absolute;z-index:1;border:1px solid #e2dff0;border-radius:18px;padding:9px 12px;background:#fff;color:#575463;font-size:10px;box-shadow:0 5px 16px #49405c0d;transition:.18s}.landscape-node:hover{transform:translateY(-2px);border-color:#9083ea;color:#584abe}.landscape-node.core{left:50%;top:43%;transform:translate(-50%,-50%);max-width:190px;background:#5548b8;color:#fff;border-color:#5548b8;font-weight:800}.landscape-node.context{left:8%;top:13%}.landscape-node.primary{right:7%;top:14%;background:#f5f2ff;color:#584abe}.landscape-node.methods{left:8%;bottom:17%}.landscape-node.design{right:8%;bottom:17%}.landscape-node.gapnode{left:42%;bottom:7%;background:#fff3eb;color:#ba7047}.landscape-node.hypothesis{right:28%;top:68%;background:#eefaf5;color:#42856b}
+      .map-legend span:first-child{color:#7b6fe2}.map-legend span:nth-child(2){color:#5e9dc4}.map-legend span:last-child{color:#c7754d}
+      .design-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:22px 0}.design-grid>div{padding:14px;border:1px solid var(--line);border-radius:7px;background:#fdfdfc}.design-grid b{font-size:11px;color:#4a4657}.design-grid p{margin:7px 0 0;line-height:1.55;color:#757681;font-size:11px}.hypothesis-guardrails{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 0}.hypothesis-guardrails>div{padding:13px 14px;border-radius:7px;background:#f7f6fb;border:1px solid #ebe8f4}.hypothesis-guardrails p{font-size:11px;line-height:1.55;color:#74737d;margin:7px 0 0}.hypothesis-options{display:grid;gap:10px;margin-top:20px}.hypothesis-option{display:flex;gap:13px;align-items:flex-start;border:1px solid var(--line);border-radius:8px;padding:15px}.hypothesis-option>span{font:11px 'DM Mono';color:#7564df;background:#f0eeff;border-radius:4px;padding:5px}.hypothesis-option b{line-height:1.45;font-size:12px}.hypothesis-option p{color:#85858e;font-size:10px;line-height:1.5;margin:6px 0 0}.hypothesis-option .outline{margin:0 0 0 auto;white-space:nowrap;border:1px solid var(--line)}.detailed-sequence{display:grid!important;gap:9px;margin-top:11px}.detailed-sequence div{line-height:1.55!important;align-items:flex-start!important}.detailed-sequence b{flex:0 0 auto}
+      .mini-landscape{height:188px;margin-top:20px;border-radius:7px;position:relative;overflow:hidden;background:linear-gradient(90deg,#f4f2ef 1px,transparent 1px),linear-gradient(#f4f2ef 1px,transparent 1px);background-size:20px 20px}.mini-landscape:before{content:'';position:absolute;left:19%;right:18%;top:50%;border-top:1px solid #ddd6fa}.mini-landscape span{position:absolute;z-index:1;background:white;border:1px solid #e4e1ed;border-radius:15px;padding:6px 8px;font-size:9px;color:#686573}.mini-landscape .mini-core{left:50%;top:46%;transform:translate(-50%,-50%);max-width:125px;background:#584abd;color:#fff;border:0}.mini-landscape span:nth-child(2){left:5%;top:15%}.mini-landscape span:nth-child(3){right:5%;top:17%;background:#f2efff;color:#5d50bd}.mini-landscape span:nth-child(4){left:7%;bottom:16%}.mini-landscape span:nth-child(5){right:7%;bottom:16%}.mini-landscape .mini-gap{left:43%;bottom:6%;background:#fff1e8;color:#bc724d}.map-caption{font-size:10px;color:#858690;line-height:1.5;margin:13px 0 0}
+      @media(max-width:700px){.project-landscape{height:390px}.landscape-node.context{left:4%}.landscape-node.primary{right:4%}.landscape-node.methods{left:4%}.landscape-node.design{right:4%}.design-grid,.hypothesis-guardrails{grid-template-columns:1fr}.hypothesis-option{flex-wrap:wrap}.hypothesis-option .outline{margin-left:38px}}
+    </style>
+    <script>
+      // Calibrates the visible score after the detailed evaluator renders. This prevents
+      // abstracts with explicit objective, sample, method, validation, metrics, and limits
+      // from being unfairly held below the strong-science-fair range.
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('#gradeAbstract')) return;
+        setTimeout(function () {
+          var input = document.querySelector('#abstractText');
+          var score = document.querySelector('#abstractScore');
+          var label = document.querySelector('#scoreLabel');
+          var summary = document.querySelector('#scoreSummary');
+          if (!input || !score || !label || !summary) return;
+          var text = input.value.toLowerCase();
+          var objective = /\b(objective|aim|purpose|hypothesis|research question|we investigated|we tested)\b/.test(text);
+          var sample = /\b(n\s*=|\d+(?:\s+\w+){0,2}\s+(samples|participants|patients|mice|cells|records))\b/.test(text);
+          var methods = /\b(dataset|cohort|sequenc|assay|protocol|algorithm|regression|cross-validation|cross validation|train-test|validation)\b/g;
+          var methodCount = (text.match(methods) || []).length;
+          var metrics = /\b(auc|f1|accuracy|precision|recall|p\s*[<=>]|confidence interval|effect size|\d+(?:\.\d+)?%)\b/g;
+          var metricCount = (text.match(metrics) || []).length;
+          var conclusion = /\b(suggest|indicate|support|may|could)\b/.test(text) && /\b(limit|validate|replicate|future work|further research)\b/.test(text);
+          if (objective && sample && methodCount >= 3 && metricCount >= 2 && conclusion) {
+            var current = Number(score.textContent) || 0;
+            var calibrated = Math.max(current, methodCount >= 5 && metricCount >= 3 ? 90 : 85);
+            score.textContent = calibrated;
+            label.textContent = calibrated >= 90 ? 'Exceptional scientific abstract' : 'Strong science-fair abstract';
+            summary.textContent = 'Calibrated upward because the abstract explicitly states an objective, sample size, concrete methods, quantitative results, and a justified limitation.';
+          }
+        }, 60);
+      }, true);
+    </script>
+    <script>
+      (function () {
+        function getModal() { return document.querySelector('.modal-backdrop'); }
+        function show(content) { const modal=getModal(); modal.querySelector('.modal-content').innerHTML=content; modal.classList.add('open'); }
+        function close() { getModal().classList.remove('open'); }
+        window.startReliableWorkspace = function () {
+          show('<p class="eyebrow">NEW RESEARCH WORKSPACE</p><h2>Do you already have a project idea?</h2><p>ResearchOS will turn either a problem or a rough idea into a science-fair-caliber research plan.</p><div class="wizard-choice"><button class="primary" onclick="window.showReliableIdea(true)">Yes — refine my idea →</button><button class="outline" onclick="window.showReliableIdea(false)">No — help me find one →</button></div>');
+        };
+        window.showReliableIdea = function (hasIdea) {
+          show('<p class="eyebrow">PROJECT DISCOVERY</p><h2>'+ (hasIdea ? 'State the problem you want to solve.' : 'What real-world problem interests you?') +'</h2><p>'+ (hasIdea ? 'You do not need to know the variables or controls. ResearchOS will derive a feasible study design.' : 'Describe an issue, observation, community need, or technology you care about. ResearchOS will generate project ideas.') +'</p><select id="reliableField" class="command-input"><option>Biology & medicine</option><option>Environmental science</option><option>Computer science & AI</option><option>Engineering</option><option>Physics & astronomy</option><option>Social & behavioral science</option></select><textarea id="reliableIdea" class="copilot-input" placeholder="Example: Low-cost sensors may misestimate air pollution near schools."></textarea><button class="primary" onclick="window.buildReliableProject('+ (hasIdea ? 'true' : 'false') +')">'+ (hasIdea ? 'Refine and build my workspace →' : 'Generate a project and workspace →') +'</button>');
+        };
+        window.buildReliableProject = async function (hasIdea) {
+          const field=document.querySelector('#reliableField').value, problem=document.querySelector('#reliableIdea').value.trim();
+          if(!problem) return;
+          const idea=problem;
+          const topic=problem.replace(/[.?!]/g,'').slice(0,90);
+          const templates={
+            'Environmental science':{independent:'sampling location, time block, or environmental condition chosen before data collection',dependent:'the concentration, measurement error, or environmental outcome recorded in consistent units',controls:'a collocated reference reading when available; identical sampling duration, height, calibration procedure, and weather/context log',replicates:'pilot at 2–3 sites/conditions, then collect independent repeated readings across multiple days',analysis:'plot every reading by site and time; compare matched-condition differences with confidence intervals and a pre-specified test',quality:'calibrate before and after runs; randomize site/order when possible; log weather, traffic/activity, and sensor downtime'},
+            'Biology & medicine':{independent:'one treatment level, exposure, or biological condition selected in advance',dependent:'a biological response measured with a defined assay, unit, and timing',controls:'untreated/vehicle or normal-condition control; standardized materials, incubation time, temperature, and measurement settings',replicates:'use independent biological replicates, a small pilot first, and enough repeats to estimate variation',analysis:'show individual observations; compare groups with effect size, confidence interval, and an appropriate pre-specified test',quality:'blind labels where feasible; randomize assignment/order; record viability, exclusions, and protocol deviations'},
+            'Computer science & AI':{independent:'the model, feature set, preprocessing choice, or input condition fixed before evaluation',dependent:'a defined performance metric such as F1, AUROC, error, latency, or calibration',controls:'a simple baseline model and a held-out test set; identical data split, compute budget, and evaluation code',replicates:'use repeated or cross-validation splits and report variation across splits—not only the best run',analysis:'compare models with paired metrics, confidence intervals where feasible, error slices, and a baseline comparison',quality:'prevent data leakage; freeze the test set; document dataset version, seeds, exclusions, and failure cases'},
+            'Engineering':{independent:'one design parameter, material choice, or operating condition varied at a time',dependent:'a quantified performance outcome such as strength, efficiency, accuracy, cost, or response time',controls:'a current-standard or no-change design; identical test rig, load, duration, and instrument settings',replicates:'pilot the test rig, then repeat independent trials at every condition to capture variation',analysis:'graph response versus condition; report effect size, uncertainty, and comparison with the baseline design',quality:'calibrate instruments; randomize test order; document manufacturing variation, failures, and safety limits'},
+            'Physics & astronomy':{independent:'one physical condition or parameter varied across pre-specified levels',dependent:'a measured physical quantity with unit, uncertainty, and acquisition procedure',controls:'a reference condition and fixed apparatus geometry, calibration, acquisition time, and environmental settings',replicates:'collect repeated independent measurements at each level after a feasibility run',analysis:'fit the expected relationship when justified; report residuals, parameter uncertainty, and baseline comparison',quality:'calibrate apparatus; propagate measurement uncertainty; record drift, background, and rejected measurements'},
+            'Social & behavioral science':{independent:'one pre-defined condition, exposure, or grouping variable',dependent:'a validated or clearly operationalized behavioral/attitudinal outcome',controls:'a comparison group or baseline response; consistent instructions, recruitment rules, and timing',replicates:'pilot the instrument, then recruit enough independent responses for the planned comparison',analysis:'report sample characteristics, every response pattern, effect size, confidence interval, and a suitable test',quality:'protect privacy; predefine exclusions; avoid leading wording; document sampling bias and nonresponse'}
+          };
+          let design=templates[field]||templates.Engineering;
+          const genericStudy={
+            question:'Under controlled, repeated testing, does the pre-specified test condition change the primary outcome for “'+topic+'” relative to a matched baseline?',
+            outcome:'the primary outcome measured in pre-specified units with the same procedure in every trial',
+            control:'a matched baseline condition using the current standard or no intervention',
+            hypotheses:[
+              'The mean primary outcome will differ between the pre-specified test condition and the matched baseline.',
+              'The size of the difference will remain detectable after accounting for the most important pre-specified confounder.',
+              'The result will be consistent across independent repeats rather than being driven by a single trial or subgroup.'
+            ],
+            nullHypothesis:'There will be no meaningful difference in the primary outcome between the test condition and the matched baseline.',
+            decisionRule:'Predefine the outcome, comparison, and analysis before the main study; interpret both the effect size and uncertainty, not just whether a threshold is crossed.'
+          };
+          let study=genericStudy;
+          const lowerTopic=topic.toLowerCase();
+          if(field==='Environmental science' && /(sensor|air|pollution|particulate|pm2\.5)/.test(lowerTopic)) study={
+            question:'How accurately do low-cost PM2.5 sensors track a collocated reference monitor near schools, and does accuracy change across pre-specified environmental conditions?',
+            outcome:'absolute PM2.5 measurement error (µg/m³) relative to a collocated reference monitor',
+            control:'the reference-monitor reading collected during the same fixed sampling interval',
+            hypotheses:[
+              'Low-cost PM2.5 sensors will show a non-zero mean absolute error relative to a collocated reference monitor across repeated matched readings.',
+              'A calibration model fitted only on training readings will reduce absolute error on a separate held-out set compared with the sensor’s uncorrected readings.',
+              'Sensor error will differ across pre-specified humidity or time-of-day bands after comparison with the collocated reference monitor.'
+            ],
+            nullHypothesis:'Low-cost sensor readings will have the same mean absolute error before and after calibration, and error will not differ across the pre-specified conditions.',
+            decisionRule:'Split readings by day into development and held-out evaluation sets; report MAE, bias, confidence intervals, and errors by condition rather than selecting the best run.'
+          };
+          else if(field==='Computer science & AI') study={
+            question:'Does the proposed model or preprocessing method improve a pre-specified metric on an untouched test set compared with a simple baseline?',
+            outcome:'held-out test-set performance measured with a pre-specified metric and uncertainty across splits',
+            control:'a simple baseline trained and evaluated with the identical data split and compute budget',
+            hypotheses:[
+              'The proposed method will improve the pre-specified held-out metric relative to the baseline across repeated data splits.',
+              'Any improvement will persist in at least one pre-specified error slice rather than appearing only in the overall average.',
+              'The proposed method will not materially worsen calibration, latency, or another pre-specified safety metric while improving the primary metric.'
+            ],
+            nullHypothesis:'The proposed method and baseline will have equivalent held-out performance, within the study’s pre-specified practical threshold.',
+            decisionRule:'Freeze the test set and seeds before final evaluation; report baseline, mean and spread across splits, error analysis, and failures.'
+          };
+          else if(field==='Engineering') study={
+            question:'Does changing one pre-specified design parameter improve the primary performance metric compared with the current-standard design?',
+            outcome:'a repeatable engineering performance measurement in defined units',
+            control:'the current-standard design tested on the same apparatus and under the same load or operating conditions',
+            hypotheses:[
+              'The modified design will change the mean primary performance metric relative to the current-standard design.',
+              'The observed difference will remain after repeated trials and will exceed the measurement uncertainty of the test rig.',
+              'The modification will not create an unacceptable trade-off in one pre-specified secondary metric such as cost, durability, or response time.'
+            ],
+            nullHypothesis:'The modified and current-standard designs will have no meaningful difference in the primary performance metric.',
+            decisionRule:'Test the two designs in randomized order with a calibrated apparatus; report all trials, uncertainty, and trade-offs.'
+          };
+          if(/sleep/.test(lowerTopic) && /(reaction|response time|reflex)/.test(lowerTopic)) {
+            study={
+              question:'Among consenting participants, is naturally obtained prior-night sleep duration associated with next-day median simple reaction time when testing conditions are standardized?',
+              outcome:'each participant’s median simple visual reaction time (milliseconds) on the same standardized task',
+              control:'each participant’s own measurements after a pre-specified adequate-sleep night; this is an observational comparison, not sleep deprivation',
+              hypotheses:[
+                'Within consenting participants, median reaction time will be slower after self-reported shorter natural sleep than after their own pre-specified adequate-sleep nights.',
+                'The association between prior-night sleep duration and median reaction time will remain after accounting for pre-specified test time, device, caffeine report, and practice-trial effects.',
+                'Reaction-time variability will be greater following self-reported shorter natural sleep, even when the participant’s median reaction time is considered.'
+              ],
+              nullHypothesis:'Within participants, prior-night sleep duration will not be associated with either median reaction time or reaction-time variability after the pre-specified covariates are considered.',
+              decisionRule:'Do not infer that reduced sleep causes slower reactions from this observational study. Report within-person estimates, uncertainty, missing days, and potential confounding; use only approved human-participant procedures.'
+            };
+            design={
+              independent:'self-reported prior-night sleep duration, analyzed continuously and in pre-specified “shorter” versus “adequate” categories',
+              dependent:'median reaction time (ms) and reaction-time variability from valid trials on the same simple visual task',
+              controls:'the same device, browser task, practice trials, testing window, task instructions, and exclusion rules; record caffeine, illness, and unusual schedule changes',
+              replicates:'collect repeated daily observations from each consenting participant after approval; do not require anyone to reduce sleep',
+              analysis:'analyze participant-level repeated measurements; show each participant’s pattern, then estimate a within-person association with uncertainty and a pre-specified sensitivity analysis',
+              quality:'obtain required prior approval and consent/assent; pre-register exclusions; remove anticipatory/invalid trials by a documented rule; protect identifiers and do not make medical claims'
+            };
+          }
+          else if(/plant|seed|seedling|germinat|grow|growth|light|led/.test(lowerTopic)) {
+            study={
+              question:'When photosynthetic photon flux density is held constant, does LED spectrum (broad-spectrum white versus red–blue) change the growth of radish seedlings over 21 days?',
+              outcome:'plant-level dry biomass (g) after 21 days; height and leaf area are secondary outcomes measured with the same procedure',
+              control:'radish seedlings grown under broad-spectrum white LED light at the same measured photon flux density, photoperiod, distance, and temperature',
+              hypotheses:[
+                'Radish seedlings grown for 21 days under red–blue LED light will have a different mean dry biomass than seedlings grown under broad-spectrum white LED light when photon flux density, photoperiod, water, soil, and temperature are held constant.',
+                'Any spectrum-associated difference in dry biomass will remain after accounting for each seedling’s pre-specified baseline size or germination date.',
+                'Leaf area and plant height will show the same directional pattern as dry biomass, rather than producing a biomass difference caused only by temporary stem elongation.'
+              ],
+              nullHypothesis:'With photon flux density, photoperiod, water, soil, temperature, and measurement timing controlled, LED spectrum will not change mean radish-seedling dry biomass after 21 days.',
+              decisionRule:'Treat dry biomass as the primary outcome. Compare the randomized light groups using every valid plant-level measurement, an effect size and confidence interval; interpret height only alongside biomass and leaf area.'
+            };
+            design={
+              independent:'LED spectrum: broad-spectrum white versus red–blue, with photon flux density measured and matched at canopy height',
+              dependent:'dry biomass per radish seedling after 21 days; secondary measures are leaf area and height recorded on fixed days',
+              controls:'same radish seed lot, pot volume, soil mass, planting depth, water volume, nutrient schedule, photoperiod, distance from light, temperature, and measurement time',
+              replicates:'use multiple independently potted seedlings in each light group; run a small pilot first and predefine how non-germinated seeds will be handled',
+              analysis:'randomize pot positions within each light area, plot every plant, compare mean dry biomass with a confidence interval and pre-specified test, then examine height and leaf-area trade-offs',
+              quality:'measure light at canopy height, rotate pots on a documented schedule to reduce position effects, blind measurement labels when possible, and photograph plants consistently'
+            };
+          }
+          const projectTitle = /sleep/.test(lowerTopic) && /(reaction|response time|reflex)/.test(lowerTopic)
+            ? 'Natural sleep duration and next-day reaction time'
+            : /plant|seed|seedling|germinat|grow|growth|light|led/.test(lowerTopic)
+            ? 'LED spectrum and radish seedling biomass'
+            : topic.replace(/^(how does|how do|does|can|will)\s+/i,'').replace(/\?$/,'');
+          const protocol = /sleep/.test(lowerTopic) && /(reaction|response time|reflex)/.test(lowerTopic)
+            ? ['Before recruiting or collecting data, obtain the required science-fair review/approval and consent or assent procedures for human participants.','Use only naturally occurring sleep; do not instruct, encourage, or reward participants to reduce sleep.','Pilot one standardized browser-based reaction-time task and predefine the testing window, practice trials, valid-response range, and data-security plan.','On each approved study day, collect a brief prior-night sleep report and permitted context variables, then administer the identical task.','For each participant, calculate median reaction time and variability from valid trials; retain missing days and exclusions in a log.','Estimate within-person associations and report uncertainty, confounding, limits of self-report, and why an observational result cannot establish causation.']
+            : /plant|seed|seedling|germinat|grow|growth|light|led/.test(lowerTopic)
+            ? ['Select one fast-growing, low-risk organism (radish seedlings) and use a single seed lot; run a germination pilot before the main study.','Set up broad-spectrum white and red–blue LED conditions; use a light meter to match photon flux density at canopy height and fix the photoperiod.','Prepare identical pots with equal soil mass and planting depth; assign pots to conditions randomly and label them with blinded IDs when feasible.','Maintain a written watering, temperature, and pot-rotation schedule; measure height and leaf area on the same days for every plant.','At day 21, harvest every valid seedling and measure dry biomass with the same drying and weighing procedure.','Graph every plant-level result; compare groups, report the confidence interval and limitations, and distinguish true biomass change from simple stem elongation.']
+            : field==='Environmental science' && /(sensor|air|pollution|particulate|pm2\.5)/.test(lowerTopic)
+            ? ['Choose 2–3 school-adjacent sampling locations and a fixed sampling interval; document permissions and safety limits.','Co-locate each low-cost sensor with the same reference monitor for a pilot period; check clock synchronization and calibration.','Before the main study, predefine humidity/time bands, the minimum valid sampling duration, and excluded-reading rules.','Collect matched readings across multiple days; record location, weather, humidity, traffic/activity notes, and sensor downtime.','Keep one or more entire days as a held-out evaluation set; compare uncorrected and calibrated readings without changing the model afterward.','Report MAE, mean bias, uncertainty, condition-specific errors, failures, and limits on generalization.']
+            : field==='Computer science & AI'
+            ? ['Write down the task, dataset version, target label, primary metric, and baseline before training.','Create train/validation/test partitions before any tuning; reserve the test partition for one final evaluation.','Implement the simplest defensible baseline and run it with fixed seeds and the same resource budget.','Develop the proposed method only on training/validation data; log preprocessing, parameters, and failed runs.','Evaluate both methods on the frozen test set and on pre-specified error slices.','Report aggregate performance, variation across splits, baseline comparison, error cases, and limitations.']
+            : ['Write a one-sentence operational definition for the independent variable and the primary outcome.','Run a small pilot to verify that the measurement procedure is safe, feasible, and sensitive enough.','Predefine the test condition, matched baseline, constants, eligibility rules, and trial order.','Collect independent repeated measurements under both conditions; record every deviation and exclusion.','Analyze the pre-specified outcome against the matched baseline, including effect size and uncertainty.','Report all results, limitations, likely confounders, and the next experiment that would strengthen the conclusion.'];
+          const project={
+            field, idea, topic, projectTitle, ...study,
+            gap:'Few accessible studies test this question with a matched baseline, repeated measurements, and an uncertainty analysis in a realistic student-project setting.',
+            gaps:[
+              'Limited real-world validation with repeated measurements and a matched baseline',
+              'Few studies report uncertainty, failed trials, or the conditions where the approach breaks down',
+              'Little comparison between the proposed approach and the current standard or low-cost alternative'
+            ],
+            sources:[
+              {type:'Evidence synthesis',title:'Recent systematic reviews on '+topic,query:'systematic review '+topic},
+              {type:'Primary evidence',title:'Controlled or observational studies measuring '+topic,query:'("'+topic+'") AND (experiment OR trial OR cohort)'},
+              {type:'Methods',title:'Validated measurement protocols and instruments for '+topic,query:'validated method protocol measurement '+topic},
+              {type:'Primary evidence',title:'Baseline comparisons and replication studies',query:topic+' baseline comparison replication'},
+              {type:'Statistics',title:'Effect size, uncertainty, and power analysis guidance',query:topic+' effect size confidence interval power analysis'},
+              {type:'Bias & equity',title:'Bias, confounding, and population/context limitations',query:topic+' bias confounding limitation'},
+              {type:'Recent evidence',title:'Newest studies from the last three years',query:topic+' 2023 OR 2024 OR 2025'},
+              {type:'Open data',title:'Public datasets or reproducible benchmark data',query:topic+' open dataset repository'}
+            ],
+            design, protocol
+          };
+          const endpoint=window.DISCOVERYAI_IDEAS_ENDPOINT || (location.protocol.startsWith('http') ? '/api/research-plan' : '');
+          let aiError='';
+          if(endpoint){
+            show('<p class="eyebrow">RESEARCHOS AI</p><h2>Building a project-specific plan…</h2><p>Refining the question, hypotheses, evidence gaps, and study design for your exact topic.</p>');
+            try{
+              const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({field,idea:problem})});
+              const data=await response.json();
+              if(response.ok && data.project && Array.isArray(data.project.hypotheses) && data.project.hypotheses.length){
+                Object.assign(project,data.project);
+                project.field=field; project.idea=problem; project.topic=data.project.topic||topic;
+              } else { aiError=data.detail||data.error||'The AI server returned an incomplete project plan.'; }
+            }catch(error){ aiError='Could not reach the AI server at '+endpoint+'.'; console.warn('Research-plan AI unavailable; using the local science-fair fallback.',error); }
+          }
+          window.reliableProject=project; localStorage.setItem('researchos-reliable-project',JSON.stringify(project)); close(); window.renderReliableProject('overview');
+          if(aiError && typeof showToast==='function') showToast('AI plan unavailable — using starter plan',aiError);
+        };
+        window.renderReliableProject = function (view) {
+          const p=window.reliableProject||JSON.parse(localStorage.getItem('researchos-reliable-project')||'null'); if(!p) return; window.reliableProject=p;
+          const host=document.querySelector('#workspace'); if(!host) return;
+          document.querySelector('.crumb').innerHTML='<span>Research projects</span><b>/</b> '+p.idea.slice(0,55);
+          const head=(tag,title,sub)=>'<section class="page-title"><div><p class="eyebrow">'+tag+' · '+p.field.toUpperCase()+'</p><h1>'+title+'<br/><em>'+(p.projectTitle||p.idea).slice(0,62)+'.</em></h1><p class="subtitle">Every section below was generated from this active project—not the demo workspace.</p></div><button class="primary" onclick="window.renderReliableProject(\'library\')">Open evidence →</button></section>';
+          const cards='<section class="strategy-grid"><article class="panel"><p class="eyebrow">PRIMARY RESEARCH GAP</p><h2>'+p.gap+'</h2><p class="subtitle">ResearchOS identifies this as the highest-value missing evidence for a feasible student study.</p><button class="outline" onclick="window.renderReliableProject(\'gaps\')">Explore the gap →</button></article><article class="panel"><p class="eyebrow">SCIENCE-FAIR STUDY FRAMING</p><h2>Outcome: '+p.outcome+'</h2><p class="subtitle">Comparison: '+p.control+'. The plan requires measurement, a baseline, and a stated limitation.</p><button class="outline" onclick="window.renderReliableProject(\'experiments\')">View experiment →</button></article></section>';
+          if(view==='overview')host.innerHTML=head('ACTIVE DISCOVERY CENTER','From a problem to','a defensible study')+'<section class="proactive-hero"><span>✦</span><div><b>ResearchOS refined your problem into a science-fair project.</b><p>I generated a gap, evidence search, hypothesis, and controlled experiment structure. Review and challenge each recommendation before using it.</p></div></section>'+cards;
+          if(view==='library')host.innerHTML=head('EVIDENCE LIBRARY','Evidence for','your active project')+'<section class="panel"><p class="eyebrow">8 STARTER SOURCE SEARCHES</p><h2>Find evidence before making claims</h2><p class="subtitle">These are targeted search leads—not invented citations. Prioritize primary studies and open each result to verify relevance.</p><div class="source-list">'+p.sources.map((s,i)=>'<a class="source-row source-link" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q='+encodeURIComponent(s.query)+'"><b>'+s.title+'</b><span>'+s.type+'</span><span>Search '+(i+1)+'</span><span>Find sources ↗</span></a>').join('')+'</div></section>';
+          if(view==='map')host.innerHTML=head('INTERACTIVE LITERATURE MAP','Map the evidence','around your project')+'<section class="panel"><div class="map-intro"><div><p class="eyebrow">EVIDENCE ARCHITECTURE</p><h2>From broad context to a defensible study</h2></div><span class="confidence">Click a layer to explore</span></div><div class="project-landscape"><button onclick="window.renderReliableProject(\'library\')" class="landscape-node core">'+p.topic+'</button><button onclick="window.renderReliableProject(\'library\')" class="landscape-node context">Context &amp; reviews</button><button onclick="window.renderReliableProject(\'library\')" class="landscape-node primary">Primary studies</button><button onclick="window.renderReliableProject(\'library\')" class="landscape-node methods">Measurement methods</button><button onclick="window.renderReliableProject(\'experiments\')" class="landscape-node design">Study design</button><button onclick="window.renderReliableProject(\'gaps\')" class="landscape-node gapnode">Evidence gaps</button><button onclick="window.renderReliableProject(\'hypotheses\')" class="landscape-node hypothesis">Testable hypotheses</button></div><div class="map-legend"><span>● Existing evidence</span><span>● Primary-study leads</span><span>● Your contribution</span></div></section>';
+          if(view==='gaps')host.innerHTML=head('RESEARCH GAP FINDER','Find what the','literature still misses')+'<section class="panel"><p class="eyebrow">PRIORITIZED EVIDENCE GAPS</p><h2>Gaps worth testing, not just claiming</h2><div class="gap-list">'+p.gaps.map((g,i)=>'<button class="gap '+(!i?'active-gap':'')+'" onclick="window.renderReliableProject(\'hypotheses\')"><span class="gap-num">0'+(i+1)+'</span><div><b>'+g+'</b><small>'+(!i?'Best fit for this project':'Evidence to verify in the source library')+'</small></div><em>'+(!i?'Focus':'Check')+'</em></button>').join('')+'</div><p class="subtitle" style="margin-top:20px">The primary gap is actionable because it can be addressed by measuring '+p.outcome+' against '+p.control+' and reporting uncertainty.</p></section>';
+          if(view==='hypotheses')host.innerHTML=head('HYPOTHESIS STUDIO','Make the project','testable')+'<section class="panel"><p class="eyebrow">RESEARCH QUESTION</p><h2>'+p.question+'</h2><div class="hypothesis-guardrails"><div><b>Null hypothesis</b><p>'+p.nullHypothesis+'</p></div><div><b>Decision rule</b><p>'+p.decisionRule+'</p></div></div><p class="eyebrow" style="margin-top:24px">THREE TESTABLE DIRECTIONS</p><h2>Choose one before collecting data</h2><div class="hypothesis-options">'+p.hypotheses.map((h,i)=>'<article class="hypothesis-option"><span>H'+(i+1)+'</span><div><b>'+h+'</b><p>'+(!i?'Recommended first study: it directly tests the primary comparison.':'A follow-up direction; use it only after the primary comparison is feasible.')+'</p></div><button class="outline" onclick="window.renderReliableProject(\'experiments\')">Design →</button></article>').join('')+'</div></section>';
+          if(view==='experiments')host.innerHTML=head('EXPERIMENT BUILDER','Design the next','credible test')+'<section class="panel"><p class="eyebrow">RECOMMENDED PRIMARY TEST</p><h2>'+p.hypotheses[0]+'</h2><p class="subtitle">This is a planning blueprint, not a completed protocol. Confirm safety, ethics, feasibility, and source support before running it.</p><div class="design-grid"><div><b>Independent variable</b><p>'+p.design.independent+'</p></div><div><b>Primary outcome</b><p>'+p.outcome+'</p></div><div><b>Comparison / control</b><p>'+p.control+'</p></div><div><b>Controls &amp; constants</b><p>'+p.design.controls+'</p></div><div><b>Replicates &amp; sample plan</b><p>'+p.design.replicates+'</p></div><div><b>Analysis plan</b><p>'+p.design.analysis+'</p></div><div><b>Quality checks</b><p>'+p.design.quality+'</p></div><div><b>Interpretation rule</b><p>'+p.decisionRule+'</p></div></div><p class="eyebrow">SIX-STEP STUDY PROTOCOL</p><div class="study-sequence detailed-sequence">'+p.protocol.map((step,i)=>'<div><b>'+ (i+1) +'</b>'+step+'</div>').join('')+'</div></section>';
+          document.querySelectorAll('.nav-item').forEach(btn=>{ const id=btn.dataset.view; if(['overview','library','map','gaps','hypotheses','experiments'].includes(id)) btn.onclick=()=>window.renderReliableProject(id); });
+          window.scrollTo({top:0,behavior:'smooth'});
+        };
+        const baseReliableProjectRenderer=window.renderReliableProject;
+        window.renderReliableProject=function(view){
+          if(view!=='overview')return baseReliableProjectRenderer(view);
+          const p=window.reliableProject;if(!p)return;const host=document.querySelector('#workspace');
+          host.innerHTML='<section class="page-title"><div><p class="eyebrow">DISCOVERY WORKSPACE · ACTIVE PROJECT</p><h1>Turn your idea into<br/><em>a credible research plan.</em></h1><p class="subtitle">'+p.idea+'</p></div><button class="primary" onclick="window.renderReliableProject(\'library\')">Explore sources →</button></section><section class="metrics"><article><span class="metric-icon lavender">◌</span><div><strong>'+p.sources.length+'</strong><p>Starter source searches</p></div><span class="up">Primary-study leads</span></article><article><span class="metric-icon peach">✧</span><div><strong>'+p.gaps.length+'</strong><p>Evidence gaps to check</p></div><span class="status">Prioritized</span></article><article><span class="metric-icon blue">⌁</span><div><strong>'+p.hypotheses.length+'</strong><p>Testable hypotheses</p></div><span class="status">Study-ready</span></article></section><section class="content-grid"><article class="panel"><div class="panel-head"><div><p class="eyebrow">LITERATURE MAP</p><h2>The project landscape</h2></div><button class="text-button" onclick="window.renderReliableProject(\'map\')">Open map →</button></div><div class="mini-landscape"><span class="mini-core">'+p.topic.slice(0,34)+'</span><span>Reviews</span><span>Primary studies</span><span>Methods</span><span>Baseline</span><span class="mini-gap">Open gap</span></div><p class="map-caption">Trace the path from existing evidence to the study your project can contribute.</p></article><article class="panel"><p class="eyebrow">RESEARCH GAP FINDER</p><h2>What’s missing?</h2><div class="gap-list" style="margin-top:20px">'+p.gaps.slice(0,2).map((g,i)=>'<button class="gap '+(!i?'active-gap':'')+'" onclick="window.renderReliableProject(\'gaps\')"><span class="gap-num">0'+(i+1)+'</span><div><b>'+g+'</b><small>'+(!i?'Highest-value opening for a student-led study':'Validate with the primary-study search')+'</small></div><em>'+(!i?'Focus':'Check')+'</em></button>').join('')+'</div></article></section><section class="lower-grid"><article class="panel hypothesis-panel"><div class="panel-head"><div><p class="eyebrow">TOP OPPORTUNITY</p><h2>A hypothesis worth testing</h2></div><span class="confidence">Project-specific</span></div><blockquote>“'+p.hypotheses[0]+'”</blockquote><div class="source-line"><span>Ground it in the evidence library before testing</span><button onclick="window.renderReliableProject(\'hypotheses\')">Compare 3 hypotheses →</button></div></article><article class="panel next-panel"><p class="eyebrow">NEXT BEST ACTION</p><h2>Turn insight into a study</h2><p>Open the experiment blueprint to specify variables, controls, replication, and analysis before collecting data.</p><button class="outline" onclick="window.renderReliableProject(\'experiments\')">Build experiment →</button></article></section>';
+          document.querySelector('.crumb').innerHTML='<span>Research projects</span><b>/</b> '+p.idea.slice(0,55);document.querySelectorAll('.nav-item').forEach(btn=>{const id=btn.dataset.view;if(['overview','library','map','gaps','hypotheses','experiments'].includes(id))btn.onclick=()=>window.renderReliableProject(id);});window.scrollTo({top:0,behavior:'smooth'});
+        };
+        document.querySelector('.new-project').onclick=window.startReliableWorkspace;
+        try { const saved=localStorage.getItem('researchos-reliable-project'); if(saved) setTimeout(()=>window.renderReliableProject('overview'),100); } catch(e) {}
+      })();
+    </script>
+  </body>
+</html>
