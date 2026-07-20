@@ -73,7 +73,7 @@
     </div>
     <div class="toast" id="toast"><span>✦</span><div><b>Discovery analysis complete</b><p>3 new evidence links and 1 gap were found.</p></div><button id="closeToast">×</button></div>
     <script src="auth-config.js"></script>
-<script src="llm-config.js?build=10"></script>
+    <script src="llm-config.js?build=10"></script>
     <script src="app.js?build=10"></script>
     <script src="science-fair-evaluator.js?build=8"></script>
     <script src="calibrated-workspace.js?build=9"></script>
@@ -286,7 +286,7 @@
               if(response.ok && data.project && Array.isArray(data.project.hypotheses) && data.project.hypotheses.length){
                 Object.assign(project,data.project);
                 project.field=field; project.idea=problem; project.topic=data.project.topic||topic;
-              } else { aiError=data.detail||data.error||'The AI server returned an incomplete project plan.'; }
+              } else { aiError=data.error||'The AI server returned an incomplete project plan.'; }
             }catch(error){ aiError='Could not reach the AI server at '+endpoint+'.'; console.warn('Research-plan AI unavailable; using the local science-fair fallback.',error); }
           }
           window.reliableProject=project; localStorage.setItem('researchos-reliable-project',JSON.stringify(project)); close(); window.renderReliableProject('overview');

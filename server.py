@@ -82,7 +82,8 @@ class ResearchOSHandler(SimpleHTTPRequestHandler):
         if self.path != "/api/research-plan":
             self.send_json(404, {"error": "Not found"})
             return
-        if not os.environ.get("OPENAI_API_KEY"):
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not api_key:
             self.send_json(503, {"error": "ResearchOS AI is not configured. Start the server with OPENAI_API_KEY set."})
             return
         try:
@@ -104,7 +105,7 @@ class ResearchOSHandler(SimpleHTTPRequestHandler):
             raw = urllib.request.Request(
                 "https://api.openai.com/v1/responses",
                 data=json.dumps(api_request).encode("utf-8"),
-                headers={"Authorization": "Bearer " + os.environ["OPENAI_API_KEY"], "Content-Type": "application/json"},
+                headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json"},
                 method="POST"
             )
             with urllib.request.urlopen(raw, timeout=75) as response:
@@ -117,9 +118,10 @@ class ResearchOSHandler(SimpleHTTPRequestHandler):
                             output += content.get("text", "")
             self.send_json(200, {"project": json.loads(output)})
         except urllib.error.HTTPError as error:
-            self.send_json(error.code, {"error": "OpenAI request failed", "detail": error.read().decode("utf-8", "replace")[:800]})
+            # Never forward provider error bodies: malformed-key errors can echo credentials.
+            self.send_json(error.code, {"error": "OpenAI request failed. Check the server environment and API billing, then try again."})
         except Exception as error:
-            self.send_json(500, {"error": "Could not generate the research plan", "detail": str(error)[:500]})
+            self.send_json(500, {"error": "Could not generate the research plan. Check the server logs privately and try again."})
 
 
 if __name__ == "__main__":
